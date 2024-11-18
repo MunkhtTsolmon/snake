@@ -10,7 +10,7 @@ const config = {
 
 const boardEl = document.getElementById("board");
 boardEl.style.width = config.width * config.size + "px";
-boardEl.style.height = config.height * config.szie + "px";
+boardEl.style.height = config.height * config.size + "px";
 
 function goUp() {
   headTop = headTop - 1;
@@ -30,6 +30,16 @@ function goDown() {
 
 function goRight() {
   headLeft = headLeft + 1;
+  if (headLeft === config.width) {
+    headLeft = 0;
+  }
+  render();
+}
+function goLeft() {
+  headLeft = headLeft - 1;
+  if (headLeft < 0) {
+    headLeft = config.width - 1;
+  }
   render();
 }
 function changeDirection(newDirection) {
@@ -51,11 +61,14 @@ function gameLoop() {
     case "up":
       goUp();
       break;
-    case "rigth":
+    case "right":
       goRight();
       break;
     case "down":
       goDown();
+      break;
+    case "left":
+      goLeft();
       break;
   }
 }
