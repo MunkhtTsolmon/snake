@@ -3,8 +3,15 @@
   background-color: black;
   position: relative;
 }
+
 .snake {
   position: absolute;
   background-color: blueviolet;
+  border-radius: 10px;
+}
+
+.food {
+  position: absolute;
+  background-color: red;
   border-radius: 10px;
 }
