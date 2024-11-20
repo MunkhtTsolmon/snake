@@ -71,6 +71,11 @@ function reset() {
   headTop = 5;
   headLeft = 5;
   direction = "right";
+  tails = [
+    { x: 2, y: 5 },
+    { x: 3, y: 5 },
+    { x: 4, y: 5 },
+  ];
 }
 function restartGame() {
   startGame();
