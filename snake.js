@@ -276,7 +276,7 @@ function gameLoop() {
     }
   }
 
-  // Move the snake in the current direction
+  // Move the snake in the current directio
   switch (direction) {
     case "up":
       goUp();
